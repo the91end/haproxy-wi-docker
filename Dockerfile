@@ -29,4 +29,5 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm && \
 EXPOSE 80
 VOLUME /var/www/haproxy-wi/
 
-CMD /wrapper.sh
+#CMD /wrapper.sh
+CMD /usr/sbin/httpd -DFOREGROUND
