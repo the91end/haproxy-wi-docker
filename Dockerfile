@@ -22,9 +22,9 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm && \
         rm -rf /var/cache/yum && \
         rm -f /etc/yum.repos.d/* && \
         cd /var/www/haproxy-wi/app &&\
-        ./create_db.py && \
         chown -R apache:apache /var/www/haproxy-wi/  && \
-		ln -s /usr/bin/python3.5 /usr/bin/python3
+        ln -s /usr/bin/python3.5 /usr/bin/python3 && \		
+        ./create_db.py
 
 EXPOSE 80
 VOLUME /var/www/haproxy-wi/
