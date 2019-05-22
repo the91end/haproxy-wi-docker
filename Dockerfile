@@ -32,7 +32,7 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm && \
 # Clone haproxy-wi git repo
 RUN git clone https://github.com/Aidaho12/haproxy-wi.git /var/www/haproxy-wi && \
         mkdir /var/www/haproxy-wi/keys/ && \
-	mkdir -p /var/www/haproxy-wi/configs/hap_config && \
+        mkdir -p /var/www/haproxy-wi/configs/hap_config && \
         chown -R apache:apache /var/www/haproxy-wi/
 
 # PIP Install deps
@@ -62,7 +62,7 @@ RUN ln -s /usr/bin/python3.5 /usr/bin/python3
 # Build sqlite database
 RUN cd /var/www/haproxy-wi/app && \
         ./create_db.py && \
-	chown apache:apache /var/www/haproxy-wi/app/haproxy-wi.db
+        chown apache:apache /var/www/haproxy-wi/app/haproxy-wi.db
 
 EXPOSE 80
 VOLUME /var/www/haproxy-wi/
