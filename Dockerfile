@@ -1,5 +1,5 @@
-FROM centos
-MAINTAINER Vagner Rodrigues Fernandes (vagner.rodrigues@gmail.com)
+FROM centos:7
+MAINTAINER Sean Cline (smcline06@gmail.com)
 # Project forked from https://github.com/Aidaho12/haproxy-wi
 
 # Copy external files
