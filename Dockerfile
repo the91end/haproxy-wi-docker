@@ -30,7 +30,7 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm && \
         openldap-devel
 
 # Clone haproxy-wi git repo
-RUN git clone https://github.com/Aidaho12/haproxy-wi.git /var/www/haproxy-wi && \
+RUN git clone https://github.com/hap-wi/roxy-wi.git /var/www/haproxy-wi && \
         mkdir /var/www/haproxy-wi/keys/ && \
         mkdir -p /var/www/haproxy-wi/configs/hap_config && \
         chown -R apache:apache /var/www/haproxy-wi/
